@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <head>
+        <title> Sirul lui Fibonacci </title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="myJavascript.js"></script>
+    </head>
+
+    <body>
+        <ul>
+            <li><a href="index.html">Acas&#259;</a></li>
+            <li><a id="title" href="despre.html">Despre Fibonacci</a></li>
+            <li><a href="algoritmi.html">Algoritmi</a></li>
+            <li><a href="implementare.html ">Implementare</a></li>
+            <li><a href="exemple.html ">Exemple</a></li>
+            <li class="dropdown">
+                <a href="aplicatii.html" class="dropbtn">Aplica&#355;ii</a>
+                <div class="dropdown-content">
+                    <a href="aplicatii.html#h1a">"WHILE" Algoritm</a>
+                    <a href="aplicatii.html#h2a">"FOR" Algoritm</a>
+                    <a href="aplicatii.html#h3a">"RECURSIV" Algoritm</a>
+                </div>
+            </li>
+            <li><a href="animatie.html">Anima&#355;ie</a></li>
+            <li><a href="#quiz.html"><button onclick="myFunction1()">Quiz</button></a></li>
+            <li><a href="#infinite.html"><button onclick="myFunction2()">Seria &#8734;</button></a></li>
+        </ul>
+
+        <script>
+            function myFunction1() {
+                window.open("quiz.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=600,height=600");
+            }
+
+            function myFunction2() {
+                window.open("infinite.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=600,height=600");
+            }
+        </script>
+
+        <a href="#title">
+            <div class="fixed"><img src="images/arow.png" width="75" height="75"></div>
+        </a>
+        <div class="headerimg">
+            <div class="headertext">
+                <h1 style="font-size:50px">&#350;irul lui Fibonacci</h1>
+                <p>Algoritm Fibonacci</p>
+            </div>
+        </div>
+
+        <div class="div_txt">
+            <h1 class="h_txt"> C++ Sirul lui Fibonacci </h1>
+            <p class="p_txt">
+                <img class="despimg1" src="images/Screenshot 2020-11-04 234440.png" alt="fibo" height="300"> &nbsp;COD SURSA C++ : <br><br> &nbsp;int Fib(int n) {<br> &nbsp;&nbsp;if(n == 0)<br> &nbsp;&nbsp;&nbsp;return 0;<br> &nbsp;if(n == 1)<br> &nbsp;&nbsp;return
+                1;
+                <br> &nbsp;return Fib(n-1) + Fib(n-2);<br> }
+                <img class="despimg1" src="images/fibonacci-recursiv.png" alt="fibo" height="300"><br><br>&nbsp;&nbsp; Putem observa ca acest algoritm a generat un arbore binar. In general, orice functie recursiva va genera mai mult sau mai putin o figura
+                de genul.
+                <br> Frunzele oricarui arbore generat de o functie recursiva vor fi conditiile de oprire. Un lucru pe care il putem observa este ca noi calculam Fib(2) de doua ori – asadar aceasta abordare nu este suficienta pentru a-l face eficient.<br><br>                &nbsp;&nbsp; Aceasta problema se rezolva printr-o tehnica in programarea dinamica numita memorizare. De asemenea mai exista o teorema care spune: orice functie implementata recursiv poate fi definita printr-o functie implementata iterativ
+                (de exemplu algoritmul de mai sus devenea):<br><br> int Fib(int n) {<br> &nbsp; if(n == 0)<br> &nbsp;&nbsp; return 0;<br> &nbsp;if(n == 1)<br> &nbsp;&nbsp; return 1;<br> &nbsp; if(n == 2)<br> &nbsp;&nbsp; return 1;<br>
+                <br> int nr_2, nr_1 = 1, nr_0 = 1;<br> for(int i = 3; i &lt;= n; i++)<br> {
+                <br> &nbsp; nr_2 = nr_1 + nr_0;<br> &nbsp; nr_0 = nr_1;<br> &nbsp; nr_1 = nr_2;<br> }
+                <br> return nr_2;<br> }
+            </p>
+        </div>
+
+        <div class="videoDiv">
+            <video width="100%" controls>
+              <source src="video.mp4" type="video/mp4">
+              <source src="video.mp4.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <footer>
+            <p>
+                <h3>Fibonacci Sequences</h3>
+                <button class="button button1"><a style="text-decoration: none; color:black;" href="index.html">Acas&#259;</a></button>
+                <button class="button button2"><a style="text-decoration: none; color:black;" href="despre.html">Despre Fibonacci</a></button>
+                <button class="button button3"><a style="text-decoration: none; color:black;" href="algoritmi.html">Algoritmi</a></button>
+                <button class="button button4"><a style="text-decoration: none; color:black;" href="implementare.html ">Implementare</a></button>
+                <button class="button button5"><a style="text-decoration: none; color:black;" href="exemple.html ">Exemple</a></button>
+                <button class="button button6"><a style="text-decoration: none; color:black;" href="aplicatii.html">Aplica&#355;ii</a></button>
+            </p>
+        </footer>
+
+
+    </body>
+
+</html>

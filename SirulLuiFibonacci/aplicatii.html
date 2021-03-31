@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <head>
+        <title> Sirul lui Fibonacci </title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="myJavascript.js"></script>
+    </head>
+
+    <body>
+
+        <ul>
+            <li><a href="index.html">Acas&#259;</a></li>
+            <li><a id="title" href="despre.html">Despre Fibonacci</a></li>
+            <li><a href="algoritmi.html">Algoritmi</a></li>
+            <li><a href="implementare.html ">Implementare</a></li>
+            <li><a href="exemple.html ">Exemple</a></li>
+            <li class="dropdown">
+                <a href="aplicatii.html" class="dropbtn">Aplica&#355;ii</a>
+                <div class="dropdown-content">
+                    <a href="aplicatii.html#h1a">"WHILE" Algoritm</a>
+                    <a href="aplicatii.html#h2a">"FOR" Algoritm</a>
+                    <a href="aplicatii.html#h3a">"RECURSIV" Algoritm</a>
+                </div>
+            </li>
+            <li><a href="animatie.html">Anima&#355;ie</a></li>
+            <li><a href="#quiz.html"><button onclick="myFunction1()">Quiz</button></a></li>
+            <li><a href="#infinite.html"><button onclick="myFunction2()">Seria &#8734;</button></a></li>
+        </ul>
+
+        <script>
+            function myFunction1() {
+                window.open("quiz.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=600,height=600");
+            }
+
+            function myFunction2() {
+                window.open("infinite.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=600,height=600");
+            }
+        </script>
+
+
+
+        <a href="#title">
+            <div class="fixed"><img src="images/arow.png" width="75" height="75"></div>
+        </a>
+        <div class="headerimg">
+            <div class="headertext">
+                <h1 style="font-size:50px">&#350;irul lui Fibonacci</h1>
+                <p>Algoritm Fibonacci</p>
+            </div>
+        </div>
+
+
+        <div class="div_txt">
+            <h1 class="h_txt"> JS. </h1>
+            <p class="p_txt">
+                Java Scripts Content
+            </p>
+
+            <p style="background-color:#dadaed;">
+                <h1 id="h1a" style="color: rgb(12, 24, 133); letter-spacing: 2px; margin-top: 5px; margin-bottom: 5px;">Sirul lui Fibbonaci - "While" Algoritm</h1>
+                &nbsp; function fibonacci(num) <br> &nbsp;{ <br> &nbsp;&nbsp; if(num==1) <br> &nbsp;&nbsp;&nbsp; return 0; <br><br> &nbsp;&nbsp;if(num==2) <br> &nbsp;&nbsp;&nbsp; return 1; <br><br> &nbsp;&nbsp;var num1=0; <br> &nbsp;&nbsp;var num2=1;
+                <br> &nbsp;&nbsp;var sum; <br> &nbsp;&nbsp;var i=2; <br> &nbsp;&nbsp;while (i &lt; num) <br> &nbsp; &nbsp; { <br> &nbsp;&nbsp;&nbsp;sum=num1+num2; <br> &nbsp;&nbsp;&nbsp;num1=num2; <br> &nbsp;&nbsp;&nbsp;num2=sum; <br> &nbsp;&nbsp;&nbsp;i+=1;
+                <br> &nbsp; } <br> &nbsp; return num2; <br> &nbsp;} <br>
+
+                <br><br>Introduceti un numar intreg pozitiv pentru a calcula cu varianta ciclica "WHILE" a Sirului lui Fibbonaci :</p>
+
+            <input type="text" id="number" value="1">
+            <button class="button_a button1" onclick="myFunction()">OK!</button>
+            <p id="demo"></p>
+
+
+
+            <hr>
+            <p style="background-color:#dadaed;">
+                <h1 id="h2a" style="color: rgb(12, 24, 133); letter-spacing: 2px; margin-top: 5px; margin-bottom: 5px;">Sirul lui Fibbonaci - "For" Algoritm</h1>
+                &nbsp;function fibonacci(num) <br> &nbsp;&nbsp;{ <br> &nbsp;&nbsp;var num1=0; <br> &nbsp;&nbsp;var num2=1; <br> &nbsp;&nbsp;var sum; <br> &nbsp;&nbsp;var i=0; <br> &nbsp;&nbsp;for (i = 0; i &lt;num; i++) <br> &nbsp;&nbsp;{ <br> &nbsp;&nbsp;&nbsp;sum=num1+num2;
+                <br> &nbsp;&nbsp;&nbsp;num1=num2; <br> &nbsp;&nbsp;&nbsp;num2=sum; <br> &nbsp;&nbsp;}
+                <br> &nbsp;&nbsp;&nbsp;return num2; <br> &nbsp;}
+
+                <br><br>Introduceti un numar intreg pozitiv pentru a calcula cu varianta ciclica "FOR" a Sirului lui Fibbonaci :</p>
+
+            <input type="text" id="number1" value="1">
+            <button class="button_a button1" onclick="myFunction1()">OK!</button>
+
+            <p id="demo1"></p>
+
+
+
+            <hr>
+            <p style="background-color:#dadaed;">
+                <h1 id="h3a" style="color: rgb(12, 24, 133); letter-spacing: 2px; margin-top: 5px; margin-bottom: 5px;">Sirul lui Fibbonaci - "Recursiv" Algoritm</h1>
+                &nbsp;function fibonacci(num) <br> &nbsp;{ <br> &nbsp;&nbsp;if(num==1) &nbsp;&nbsp;&nbsp;return 0; <br> <br> &nbsp;&nbsp;if (num == 2) <br> &nbsp;&nbsp;&nbsp;return 1;<br><br> &nbsp;&nbsp;return fibonacci(num - 1) + fibonacci(num - 2);
+                <br> &nbsp;} <br>
+
+                <br><br>Introduceti un numar intreg pozitiv pentru a calcula cu varianta recursiva a Sirului lui Fibbonaci :</p>
+
+            <input type="text" id="number2" value="1">
+            <button class="button_a button1" onclick="myFunction2()">OK!</button>
+
+            <p id="demo2"></p>
+
+
+            <br><br><br>
+            <footer>
+                <p>
+                    <h3>Fibonacci Sequences</h3>
+                    <button class="button button1"><a style="text-decoration: none; color:black;" href="index.html">Acas&#259;</a></button>
+                    <button class="button button2"><a style="text-decoration: none; color:black;" href="despre.html">Despre Fibonacci</a></button>
+                    <button class="button button3"><a style="text-decoration: none; color:black;" href="algoritmi.html">Algoritmi</a></button>
+                    <button class="button button4"><a style="text-decoration: none; color:black;" href="implementare.html ">Implementare</a></button>
+                    <button class="button button5"><a style="text-decoration: none; color:black;" href="exemple.html ">Exemple</a></button>
+                    <button class="button button6"><a style="text-decoration: none; color:black;" href="aplicatii.html">Aplica&#355;ii</a></button>
+                </p>
+            </footer>
+
+
+    </body>
+
+</html>
